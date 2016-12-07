@@ -414,7 +414,6 @@ def hands():
         print("That is not a valid answer, restart the room")
         hands()
 
-
 def die(why):
     print("You died becuase %s" % why)
 

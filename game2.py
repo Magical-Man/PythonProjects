@@ -2,6 +2,7 @@ from sys import exit
 import random
 
 print("What is your name?")
+
 name = raw_input("> ")
 
 def start():

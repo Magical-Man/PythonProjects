@@ -1,4 +1,5 @@
 from sys import exit
+import random
 
 print("What is your name?")
 name = raw_input("> ")
@@ -100,6 +101,93 @@ def souls():
     else:
         print("That is not a valid answer, restart the room")
         souls()
+
+def cloth():
+    def der(direction):
+        if direction == "n":
+            print("There is nothing there")
+            der(raw_input("> "))
+
+        elif direction == "ne":
+            print("There is nothing there")
+            der(raw_input("> "))
+
+        elif direction == "e":
+            tar()
+
+        elif direction == "se":
+            reading()
+
+        elif direction == "s":
+            pens()
+
+        elif direction == "sw":
+            start1()
+
+        elif direction == "w":
+            souls()
+
+        elif direction == "nw":
+            war()
+
+        else:
+            print("That is not a direction, try again, remember use lowercase letters without a space, like ns, which is not a direction")
+            print("Which way do you want to go?")
+
+            der(raw_input("> "))
+
+
+        print("You have entered into the room of souls, before you stands the great Sewing Machine")
+        print("""You realize that the machine is running, and that if you continue to stand on the piece of cloth it will impale you!
+        But when you try and move you see your feet are glued down! \nWhat will you do?""")
+        print("1. Try and unstick your feet in an effort to get loose")
+        print("2. You try and talk to the machine to make a diplomatic bargain")
+
+        choice = raw_input("> ")
+
+        if choice == "1":
+            chance = [0, 1]
+            result = random.choice(chance)
+            print("Alright, there is a 50/50 chance that you will escape, litterally, we will see what happens!")
+
+            if result == 1:
+                print("You managed to escape! You run away from the sewing machine, and you are free to choose a direction")
+                der(raw_input("> "))
+
+            elif result == 0:
+                print("We are very sorry, but you were not able to escape.")
+                die(" You were impaled by a sewing machine, pathetic")
+
+            else:
+                print("There is an ERROR")
+                cloth()
+
+        elif choice == "2":
+            print("The machine stops, and tells you to speak your mind")
+            print("What do you do?")
+            print("1. Make up a sob story about how you are trying to get back to your long lost love, and you will do anything for them")
+            print("2. Tell the truth, that you are a greedy treasure hunter looking to make lots of money, and you don't care what you have to do")
+
+            choice == raw_input("> ")
+
+            if choice == "1":
+                print("The sewing machine uses the built in lie detector function to tell you are lying!")
+                print("The machine decides to kill you for lying")
+                die("You lied to a lie detector")
+
+            elif choice == "2":
+                print("The machine understands the greed of humans, and decides to let you go on with your quest")
+
+                der(raw_input("> "))
+
+            else:
+                print("That is not a valid answer, restart the room")
+                cloth()
+
+        else:
+            print("That is not a valid answer, restart the romm")
+            cloth()
+
 def die(why):
     print("You died becuase %s" % why)
 

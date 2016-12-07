@@ -4,29 +4,97 @@ import random
 print("What is your name?")
 name = raw_input("> ")
 
-def lava():
-    print("You tripped and fell.")
+def start():
+    print("Welcome to the ultimate quest for riches and glory!")
+    print("You may move any of eight cardinal directions, which are as follows: \nn \nne \ne \nse \ns \nsw \nw \nnw")
+    print("To use these directions, type the letters as are above, and not the full name")
+    print("Your goal is to reach the treausre room and to claim the ultimate prize, \nThe Crown of Carmel!!!")
+    print("In order to get here, you will face a variety of differenct rooms and have to navigate your way through the world.")
+    print("In each room you will face several encounters, and if you prevail, then you will be able to select a direction and move on.")
+    print("In each encounter you will be faced with 2 choices. Just type the number of the choice you want, and press enter to select it.")
+    print("So good luck, and best of whishes %s" % name)
 
-    die("You fell into lava!")
+    print("What direction would you like to go in?")
+    def der(direction):
 
-def wall():
-    print("You can not pass because there is a wall, go another way.")
+        if direction == "n":
+            souls()
 
-def pit():
-    print("You slip on a napkin")
+        elif direction == "ne":
+            cloth()
 
-    die("When you fell you landed in a botomless pit, where you starve")
+        elif direction == "e":
+            pens()
+
+        elif direction == "se":
+            lava()
+
+        elif direction == "s":
+            pit()
+
+        elif direction == "sw":
+            hands()
+
+        elif direction == "w":
+            bugs()
+
+        elif direction == "nw":
+            pit()
+
+        else:
+            noder()
+            print("What direction would you like to go in?")
+            der(raw_input("> "))
+
+    der(raw_input("> "))
+
+def start1():
+    print("You are back at the start again!")
+    print("Which direction do you want to go in?")
+
+    def der(direction):
+
+        if direction == "n":
+            souls()
+
+        elif direction == "ne":
+            cloth()
+
+        elif direction == "e":
+            pens()
+
+        elif direction == "se":
+            lava()
+
+        elif direction == "s":
+            pit()
+
+        elif direction == "sw":
+            hands()
+
+        elif direction == "w":
+            bugs()
+
+        elif direction == "nw":
+            pit()
+
+        else:
+            noder()
+            der(raw_input("> "))
+    print("What direction would you like to go in?")
+    der(raw_input("> "))
 
 def souls():
     def der(direction):
         if direction == "n":
             wall()
+            print("What direction would you like to go in?")
             der(raw_input(">"))
 
         elif direction == "ne":
-            print("There is nothing there")
+            nothing()
+            print("What direction would you like to go in?")
             der(raw_input("> "))
-
         elif direction == "e":
             cloth()
 
@@ -40,16 +108,16 @@ def souls():
             bugs()
 
         elif direction == "w":
-            print("There is nothing there")
+            nothing()
+            print("What direction would you like to go in?")
             der(raw_input("> "))
 
         elif direction == "nw":
             sound()
 
         else:
-            print("That is not a direction, try again, remember use lowercase letters without a space, like ns, which is not a direction")
-            print("Which way do you want to go?")
-
+            noder()
+            print("What direction would you like to go in?")
             der(raw_input("> "))
 
     print("You have entered the room of souls")
@@ -86,6 +154,7 @@ def souls():
         if choice == "1" or "True" or "true":
             print("That is correct go ahead and make your choice")
 
+            print("What direction would you like to go in?")
             der(raw_input("> "))
 
         elif choice == "2" or "False" or "false":
@@ -105,11 +174,13 @@ def souls():
 def cloth():
     def der(direction):
         if direction == "n":
-            print("There is nothing there")
+            nothing()
+            print("What direction would you like to go in?")
             der(raw_input("> "))
 
         elif direction == "ne":
             print("There is nothing there")
+            print("What direction would you like to go in?")
             der(raw_input("> "))
 
         elif direction == "e":
@@ -131,9 +202,8 @@ def cloth():
             war()
 
         else:
-            print("That is not a direction, try again, remember use lowercase letters without a space, like ns, which is not a direction")
-            print("Which way do you want to go?")
-
+            noder()
+            print("What direction would you like to go in?")
             der(raw_input("> "))
 
 
@@ -151,6 +221,7 @@ def cloth():
 
         if result == 1:
             print("You managed to escape! You run away from the sewing machine, and you are free to choose a direction")
+            print("What direction would you like to go in?")
             der(raw_input("> "))
 
         elif result == 0:
@@ -176,7 +247,7 @@ def cloth():
 
         elif choice == "2":
             print("The machine understands the greed of humans, and decides to let you go on with your quest")
-
+            print("What direction would you like to go in?")
             der(raw_input("> "))
 
         else:
@@ -186,6 +257,92 @@ def cloth():
     else:
         print("That is not a valid answer, restart the romm")
         cloth()
+
+def pens():
+    def der(direction):
+        if direction == "n":
+            cloth()
+
+        elif direction == "ne":
+            tar()
+
+        elif direction == "e":
+            reading()
+
+        elif direction == "se":
+            print("There is nothing there")
+            print("What direction would you like to go in?")
+            der(raw_input("> "))
+
+        elif direction == "s":
+            lava()
+
+        elif direction == "sw":
+            pit()
+
+        elif direction == "w":
+            start1()
+
+        elif direction == "nw":
+            souls()
+
+        else:
+            noder()
+            print("What direction would you like to go in?")
+            der(raw_input("> "))
+
+    print("Welcome to the room of pens!")
+    print("You are walking to the next door")
+    print("......................")
+    print("And then a pen comes down from the cieling stabbing you under it")
+    print("You are bleeding and will die very soon \nWhat will you do?")
+    print("1. Remove the pen from your body, and go as fast as you can to the next door")
+    print("2. Know that death is coming, and call on the Pen Godess for help")
+
+    choice = raw_input("> ")
+
+    if choice == "1":
+        print("As you remove the pen some ink coomes out the tip, and enters your blood stream, giving you blood posining")
+        print("What will you do?")
+        print("1. Cut your main artery so that you bleed to death quikly")
+        print("2. Call on the Pen Godess's son for help")
+
+        choice = raw_input("> ")
+
+        if choice == "1":
+            die("You bleed to death painfully")
+
+        elif choice == "2":
+            print("The demigod says that his mother probably would have helped, but you blew it, and he will kill you")
+            die("You were killed by a todler demigod")
+
+        else:
+            print("That is not a valid answer, restart the room")
+            pens()
+
+    elif choice == "2":
+        print("The Godess answers you and removes the pen very carefully")
+        print("You die, but she revieves you, and says she will let you go on, but after a test")
+        print("She asks you what is better, Band or Orchestra")
+        print("1. Band \n2. Orchestra")
+
+        choice = raw_input("> ")
+
+        if choice == "1":
+            print("I agree with you! You may pass")
+            print("What direction would you like to go in?")
+            der(raw_input("> "))
+
+        elif choice == "2":
+            print("I do not agree with you, but I suppose that everyone is entitled to their own opnions so I will let you pass, but know I hate you now :)")
+            print("What direction would you like to go in?")
+            der(raw_input("> "))
+
+        else:
+            print("That is not a valid answer, restart the room")
+            pens()
+    else:
+        print("That is not a valid answer, restart the room.")
 
 def die(why):
     print("You died becuase %s" % why)
@@ -209,86 +366,6 @@ def die(why):
 
     leave()
 
-def start():
-    print("Welcome to the ultimate quest for riches and glory!")
-    print("You may move any of eight cardinal directions, which are as follows: \nn \nne \ne \nse \ns \nsw \nw \nnw,")
-    print("Your goal is to reach the treausre room and to claim the ultimate prize, \nThe Crown of Carmel!!!")
-    print("In order to get here, you will face a variety of differenct rooms and have to navigate your way through the world.")
-    print("In each room you will face several encounters, and if you prevail, then you will be able to select a direction and move on.")
-    print("So good luck, and best of whishes %s" % name)
-
-    print("What direction would you like to go in?")
-    def der(direction):
-
-        if direction == "n":
-            souls()
-
-        elif direction == "ne":
-            cloth()
-
-        elif direction == "e":
-            pens()
-
-        elif direction == "se":
-            lava()
-
-        elif direction == "s":
-            pit()
-
-        elif direction == "sw":
-            hands()
-
-        elif direction == "w":
-            bugs()
-
-        elif direction == "nw":
-            pit()
-
-        else:
-            print("That is not a direction, try again, remember use lowercase letters without a space, like ns, which is not a direction")
-            print("Which way do you want to move?")
-            der(raw_input("> "))
-
-    der(raw_input("> "))
-
-def start1():
-    print("You are back at the start again!")
-    print("Which direction do you want to go in?")
-
-    def der(direction):
-
-        if direction == "n":
-            souls()
-
-        elif direction == "ne":
-            cloth()
-
-        elif direction == "e":
-            pens()
-
-        elif direction == "se":
-            lava()
-
-        elif direction == "s":
-            pit()
-
-        elif direction == "sw":
-            hands()
-
-        elif direction == "w":
-            bugs()
-
-        elif direction == "nw":
-            pit()
-
-        else:
-            print("That is not a direction, try again, remember use lowercase letters without a space, like ns, which is not a direction")
-            print("Which way do you want to move?")
-            der(raw_input("> "))
-
-    der(raw_input("> "))
-
-
 def lava():
     print("You tripped and fell.")
 
@@ -301,5 +378,12 @@ def pit():
     print("You slip on a napkin")
 
     die("When you fell you landed in a botomless pit, where you starve")
+
+def nothing():
+    print("Ther is nothing there")
+
+def noder():
+    print("That is not a direction, try again, rememberuse lowercase letters without a space, for example, ne")
+    print("Which way do you want to go?")
 
 start()

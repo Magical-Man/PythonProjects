@@ -13,6 +13,7 @@ def start():
     print("In each room you will face several encounters, and if you prevail, then you will be able to select a direction and move on.")
     print("In each encounter you will be faced with 2 choices. Just type the number of the choice you want, and press enter to select it.")
     print("So good luck, and best of whishes %s" % name)
+    print("PS. Pro-Tip: Draw a map on real paper in the real world")
 
     print("What direction would you like to go in?")
     def der(direction):
@@ -344,6 +345,76 @@ def pens():
     else:
         print("That is not a valid answer, restart the room.")
 
+def hands():
+    def der(direction):
+        if direction == "n":
+            bugs()
+
+        elif direction == "ne":
+            start1()
+
+        elif direction == "e":
+            pit()
+
+        elif direction == "se":
+            numbers()
+
+        elif direction == "s":
+            lava()
+
+        elif direction == "sw":
+            nothing()
+            der(raw_input("> "))
+
+        elif direction == "w":
+            nothing()
+            der(raw_input("> "))
+
+        elif direction == "nw":
+            pit()
+
+        else:
+            noder()
+            der(raw_input("> "))
+
+    print("Welcome to the Hall of Hands")
+    print("After you walk in, you feel somethings touching you, and you look over and see thousands of hands on the wals!")
+    print("What will you do?")
+    print("1. Run through the room as fast as you possibly can to get to the door you see at the end of the hall")
+    print("2. Just go back to the start of the maze")
+
+    choice = raw_input("> ")
+
+    if choice == "1":
+        print("There is a 3/5 chance that you will survive, lets see what happnens \n**suspense**")
+
+        chance = [1, 2, 3, 4, 5]
+        result = random.choice(chance)
+
+        if result == 4 or 5:
+            print("The odds were against your favor! Be more wise next time")
+            die("Stupidity and bad descision making")
+
+        elif result == 1 or 2 or 3:
+            print("You beat the odds, congrats!")
+            print("You make it to the end of the hall and are allowed to move on")
+            print("What direction would you like to go in?")
+
+            der(raw_input("> "))
+
+        else:
+            print("For some reason there was an ERROR")
+            hands()
+
+    elif choice == "2":
+        print("It may take longer, but trust me, it was for the better..... maybe")
+        start1()
+
+    else:
+        print("That is not a valid answer, restart the room")
+        hands()
+
+
 def die(why):
     print("You died becuase %s" % why)
 
@@ -375,12 +446,13 @@ def wall():
     print("You can not pass because there is a wall, go another way.")
 
 def pit():
-    print("You slip on a napkin")
+
+    print("You slip on a napkin and fall")
 
     die("When you fell you landed in a botomless pit, where you starve")
 
 def nothing():
-    print("Ther is nothing there")
+    print("There is nothing there")
 
 def noder():
     print("That is not a direction, try again, rememberuse lowercase letters without a space, for example, ne")

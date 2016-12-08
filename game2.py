@@ -769,6 +769,290 @@ def sound():
 
         sound()
 
+def war():
+    def der(direction):
+        if direction == "n":
+            nothing()
+
+            der(raw_input("> "))
+
+        elif direction == "ne":
+            nothing()
+
+            der(raw_input("> "))
+
+        elif direction == "e":
+            nothing()
+
+            der(raw_input("> "))
+
+        elif direction == "se":
+            cloth()
+
+        elif direction == "s":
+            wall()
+
+            der(direction)
+
+        elif direction == "sw":
+            lava()
+
+        elif direction == "w":
+            sound()
+
+        elif direction == "nw":
+            nothing()
+
+            der(direction)
+
+        else:
+            noder()
+
+            der(raw_input("> "))
+
+    print("Welcome to the Hall of War! \nIn this place, Ares, the god of war rules, he is all powerfull!")
+
+    print("He comes to you and asks, \"What is your quest?\"")
+
+    print("How will you answer? \n1. To seek the Holy Grail! \n2. To obtain the ultimate treasure!")
+
+    choice = raw_input(">  ")
+
+    if choice == "1":
+        print("Good job, two more questions ensue.")
+
+        print("What is the air-speed velocity of an unladen swallow? \nHow will you answer?")
+
+        print("1. What do you mean? An African or European swallow? \n2. 35.536 kmh")
+
+        choice = raw_input("> ")
+
+        if choice == "1":
+            print("Right again! Only one more question. \n Who was the first person to attempt to cross the bridge of death?")
+
+            print("1. King Arthur \n2. Sir Launcelot of Camelot")
+
+            choice = raw_input("> ")
+
+            if choice == "2":
+                print("Very good! That is correct. You have passed the test of Ares and may now move on")
+
+                print("What direction do you want to go in?")
+
+                der(raw_input("> "))
+
+            elif choice == "1":
+                print("Unfortunaley that is incorrect and I, god of war will have to kill you know")
+
+                die("Lack of Monty-Python knowledge")
+
+            else:
+                print("That is not a valid answer, restart the room")
+
+                war()
+
+        elif choice == "2":
+            print("I'm very sorry, that is incorrect, I will have to kill you know with my war magic")
+
+            die("Lack of Monty-Python knowledge")
+
+        else:
+            print("That is not a valid answer, restart the room")
+
+            war()
+
+    elif choice == "2":
+        print("That may be the truth, but it is not the answer that we were looking for. Restart the room")
+
+        war()
+
+    else:
+        print("That is not a valid answer, restart the room")
+
+        war()
+
+def numbers():
+    def der(direction):
+        if direction == "n":
+            pit()
+
+        elif direction == "ne":
+            lava()
+
+        elif direction == "e":
+            electric()
+
+        elif direction == "se":
+            nothing()
+
+            der(raw_input("> "))
+
+        elif direction == "s":
+            nothing()
+
+            der(raw_input("> "))
+
+        elif direction == "sw":
+            nothing()
+
+            der(raw_input("> "))
+
+        elif direction == "w":
+            lava()
+
+        elif direction == "nw":
+            hands()
+
+        else:
+            noder()
+
+            der(raw_input("> "))
+
+    print("This is the room of numbers, before you stands a man named Fibonacci he is an all-knowing being")
+
+    print("He will know ask you a very very basic math question, it is simple, there are three questions, to get to the next one must pass the current one")
+
+    print("What does the Fibonacci Sequence have to do with nature? No searching online!!!")
+
+    print("1. Nothing in nature will ever be a number from the sequence \n2. Everything in nature is from the sequence")
+
+    choice = raw_input("> ")
+
+    if choice == "1":
+        print("That is incorrect, I'm very sorry to have to do this")
+
+        die("You were overun with integers, and they smothered you")
+
+    elif choice == "2":
+        print("Bravo! That is right, on to the next question")
+
+        print("What is scientific notation?")
+
+        print("1. A way of expressing numbers that are normally too lare to deal with \n2. A way of adding and subtracting numbers to make single numbers")
+
+        choice = raw_input("> ")
+
+        if choice == "1":
+            print("Right again! Only one more question, and you can move on!")
+
+            print("What is the proper mathematical term for a division bar? No searching online!")
+
+            print("1. Virgule \n2. Vinculum")
+
+            choice = raw_input("> ")
+
+            if choice == "1":
+                print("I'm sorry that is incorrect, we will kill you now.")
+
+                die("Millions of failed test force you into depression, you commit suicide")
+
+            elif choice == "2":
+                print("Congratulations, you passed the test, finish your journey")
+
+                print("What direction would you like to go in?")
+
+                der(raw_input("> "))
+
+            else:
+                print("That is not a valid answer, restart the room")
+
+                numbers()
+
+        elif choice == "2":
+            print("That is not the correct answer.")
+
+            die("Mr. Fibonacci kills you with a nine")
+
+        else:
+            print("That is not a valid answer, restart the room")
+
+            numbers()
+
+    else:
+        print("Tha is not a valid answer, restart the room")
+
+        numbers()
+
+def electric():
+    def der(direction):
+        if direction == "n":
+            lava()
+
+        elif direction == "ne":
+            nothing()
+
+            der(raw_input("> "))
+
+        elif direction == "e":
+            nothing()
+
+            der(raw_input("> "))
+
+        elif direction == "se":
+            nothing()
+
+            der(raw_input("> "))
+
+        elif direction == "s":
+            nothing()
+
+            der(raw_input("> "))
+
+        elif direction == "sw":
+            nothing()
+
+            der(raw_input("> "))
+
+        elif direction == "w":
+            numbers()
+
+        elif direction == "nw":
+            pit()
+
+        else:
+            noder()
+
+            der(raw_input("> "))
+
+    print("Welcome to the room of Electricity it is by far the most remore room on the map, and quite desolate")
+
+    print("There are thunderbolts coming from the cieling, you have a 4/7 chance of being hit by one, or you can just jump of the cliff next to you and restart")
+
+    print("1. Brave the thunderbolts \n2. Jump the cliff")
+
+    choice = raw_input("> ")
+
+    if choice == "1":
+        chance = [1, 2, 3, 4, 5, 6, 7]
+
+        result = random.choice(chance)
+
+        if result < 5:
+            print("You were not able to make it across the field")
+
+            die("Struck by lightning")
+
+        elif result > 4:
+            print("What a lucky person! Good job making it across, you are now able to move on to your next direction")
+
+            der(raw_input("> "))
+
+        else:
+            print("That is not an option, restart the room")
+
+            electric()
+
+    elif choice == "2":
+        print("Sometimes, the easy way is the right way after all")
+
+        start1()
+
+    else:
+        print("That is not a valid answer, restart the room")
+
+        electric()
+
+
 def die(why):
     print("You died becuase %s" % why)
 
@@ -801,6 +1085,8 @@ def lava():
 
 def wall():
     print("You can not pass because there is a wall, go another way.")
+
+    print("What direction do you want to go?")
 
 def pit():
     print("You slip on a napkin and fall")

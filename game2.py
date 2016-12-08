@@ -1052,7 +1052,84 @@ def electric():
 
         electric()
 
+def reading():
+    def der(direction):
+        if direction == "n":
+            tar()
 
+        elif direction == "ne":
+            treasure()
+
+        elif direction == "e":
+            nothing()
+
+            der(raw_input("> "))
+
+        elif direction == "se":
+            nothing()
+
+            der(raw_input("> "))
+
+        elif direction == "s":
+            nothing()
+
+            der(raw_input("> "))
+
+        elif direction == "sw":
+            lava()
+
+        elif direction == "w":
+            pens()
+
+        elif direction == "nw":
+            cloth()
+
+        else:
+            noder()
+
+            der(raw_input("> "))
+
+    print("Welcome to the room of reading before you stands Frodo Baggins, who has some questions to ask you.")
+
+    print("The first question is, where was the man that wrote about me born? No searching online")
+
+    print("1. England \n2. South Africa")
+
+    choice = raw_input("> ")
+
+    if choice == "1":
+        print("You are incorrect I will now attack you with Sting")
+
+        die("Killed by a little man with an elf dagger")
+
+    elif choice == "2":
+        print("Very good! That is correct")
+
+        print("The next question is, what do you call it when something is made out to be better than it is in literacy")
+
+        print("1. Euphamism \n2. Hyperbole")
+
+        choice = raw_input("> ")
+
+        if choice == "1":
+            print("Wonderful job on those questions, you may move on to the door \nWhat direction would you like to go in?")
+
+            der(raw_input("> "))
+
+        elif choice == "2":
+            print("I'm very sorry, that is incorrect")
+
+            die("You are possed by Sarumon and forced of the roof of a building")
+
+        else:
+            print("That is not a valid answer, restart the room")
+
+            reading()
+
+    else:
+        print("That is not a valid answer, restar the rom")
+
+        reading()
 def die(why):
     print("You died becuase %s" % why)
 

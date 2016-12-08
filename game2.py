@@ -482,13 +482,13 @@ def hands():
 
         result = random.choice(chance)
 
-        if result == 4 or 5:
-            print("The odds were against your favor! Be more wise next time")
+        if result > 3:
+            print("Bad luck, and you may think this was intentional, but trust me, it was random draw")
 
             die("Stupidity and bad descision making")
 
-        elif result == 1 or 2 or 3:
-            print("You beat the odds, congrats!")
+        elif result < 4:
+            print("You made it congrats!")
 
             print("You make it to the end of the hall and are allowed to move on")
 
@@ -510,6 +510,264 @@ def hands():
         print("That is not a valid answer, restart the room")
 
         hands()
+
+def bugs():
+    def der(direction):
+        if direction == "n":
+            pit()
+
+        elif direction == "ne":
+            souls()
+
+        elif direction == "e":
+            start1()
+
+        elif direction == "se":
+            lava()
+
+        elif direction == "s":
+            hands()
+
+        elif direction == "sw":
+            nothing()
+
+            der(raw_input("> "))
+
+        elif direction == "w":
+            lava()
+
+        elif direction == "nw":
+            rodent()
+
+        else:
+            noder()
+
+            der(raw_input("> "))
+
+    print("You enter the room of bugs!")
+
+    print("In front of you is a caterpiller. \nIt proceeds to telepathically tell you that you should squash it")
+
+    print("What do you do?")
+
+    print("1. Do what he said and squash it \n2. Follow your instinct, and leave it be")
+
+    choice = raw_input("> ")
+
+    if choice == "1":
+        print("The caterpiller is very mad at you and then bites your arm! \nWhat do you do?")
+
+        print("1. Run back to the start of the maze to get medical help \n2. Stab yourself in the heart, but after, ask the caterpiller to revive you")
+
+        choice = raw_input("> ")
+
+        if choice == "1":
+            print("It may take a while, but that was probably the right choice")
+
+            start1()
+
+        elif choice == "2":
+            print("He understands your quest, and he gives you the rest of your life, and lets you do on with the quest")
+
+            print("What direction would you like to go in?")
+
+            der(raw_input("> "))
+
+        else:
+            print("That is not a valid answer, restart the room")
+
+            bugs()
+
+    elif choice == "2":
+        print("The bug is happy with your kind heart, and justy needs you to swear an oath before letting you move on")
+
+        print("The Oath is: \nI agree never to kill a bug ever again \nWhat do you do?")
+
+        print("1. Agree to take the oath \n2. Disagree")
+
+        choice = raw_input("> ")
+
+        if choice == "1":
+            print("The bug says that is unrealistic, and becomes mad at you")
+
+            die("Killed by a bug becuase you are not realistic")
+
+        elif choice == "2":
+            print("The bug tells you that your answer is the more realistic one, and lets you pass")
+
+            print("What direction would you like to go in?")
+
+            der(raw_input("> "))
+
+        else:
+            print("That is not a valid answer, restart the room")
+
+            bugs()
+
+    else:
+        print("That is not a valid answer, restart the room")
+
+        bugs()
+
+def rodent():
+    def der(direction):
+        if direction == "n":
+            nothing()
+
+            der(raw_input("> "))
+
+        elif direction == "ne":
+            sound()
+
+        elif direction == "e":
+            lava()
+
+        elif direction == "se":
+            bugs()
+
+        elif direction == "s":
+            lava()
+
+        elif direction == "sw":
+            nothing()
+
+            der(raw_input("> "))
+
+        elif direction == "w":
+            nothing()
+
+            der(raw_input("> "))
+
+        elif direction == "nw":
+            nothing()
+
+            der(raw_input("> "))
+
+        else:
+            noder()
+
+            der(raw_input("> "))
+
+    print("Welcome to the room of rodents \nBefore you stands a giant rat")
+
+    print("The rat immediatly attacks you, and manages to lethally bite you, but in your pain, you are not able to run!")
+
+    print("The rat then transforms into a man, holding two syringes, one the cure, and the other instant death, but he does not tell you which is which")
+
+    print("What would you like to do? \n1. Randomly grab a syringe and inject yourself \n2. Attack the man, and hold both syringes to his neck, threatning to inject both if you do not tell him which is which")
+
+    choice = raw_input("> ")
+
+    if choice == "1":
+        chance = [0, 1]
+
+        result = random.choice(chance)
+
+        if result == 0:
+            print("You are very lucky, you drew the right syringe, and were able to save yourself! \nYou may move on")
+
+            print("What direction would you like to go in?")
+
+            der(raw_input("> "))
+
+        elif result == 1:
+            print("Unfortunatley, you chose the wrong syringe, and you failed to save yourself")
+
+            die("You did not choose the right syringe")
+
+        else:
+            print("For some reason there was an ERROR")
+
+            rodent()
+
+    elif choice == "2":
+        print("The man just lets you inject him with both, as they do not effect him. For he has immunity")
+
+        print("The man then attacks you, plain and simple")
+
+        die("Killed by an alchmeist with immunity, Bravo")
+
+    else:
+        print("That is not a valid answer, restart the room")
+
+def sound():
+    def der(direction):
+        if direction == "n":
+            nothing()
+
+            der(raw_input("> "))
+
+        elif direction == "ne":
+            nothing()
+
+            der(raw_input("> "))
+
+        elif direction == "e":
+            war()
+
+        elif direction == "se":
+            souls()
+
+        elif direction == "s":
+            pit()
+
+        elif direction == "sw":
+            rodent()
+
+        elif direction == "w":
+            nothing()
+
+            der(raw_input("> "))
+
+        elif direction == "nw":
+            nothing()
+
+            der(raw_input("> "))
+
+        else:
+            noder()
+
+            der(raw_input("> "))
+
+    print("Welcome to the hall of sound! \nBeofore you stands a woman known as \"The Audiophile\" She will judge you based on your answer to one question")
+
+    print("She tells you that you have two choices \n1. Answer the question that she will ask \n2. Run away in fear of losing all the progress you have made")
+
+    choice = raw_input("> ")
+
+    if choice == "1":
+        print("Alright then, you are very brave answering this")
+
+        print("The question is, which of these two brands is superior? Beats or Sennheiser?")
+
+        print("1. Beats \n2. Sennheiser")
+
+        choice = raw_input("> ")
+
+        if choice == "1":
+            print("You are evil. You like an overpriced company with terrible sound. I hate you. ")
+
+            die("Commit suicide due to realizing your stupdity")
+
+        elif choice == "2":
+            print("Very good!!!!!!! I was not expecting this answer, you are clearly informed and wise. \nChoose a direction")
+
+            der(raw_input("> "))
+
+        else:
+            print("That is not an option, restart the room")
+
+            sound()
+
+    elif choice == "2":
+        print("Unlike the previous rooms, I am more harsh, I do not deem you worthy to continue, as to continue, you must be brave")
+
+        die("Killed by the sound woman due to lack of bravery")
+
+    else:
+        print("That is not an option, restart the room")
+
+        sound()
 
 def die(why):
     print("You died becuase %s" % why)
@@ -550,10 +808,10 @@ def pit():
     die("When you fell you landed in a botomless pit, where you starve")
 
 def nothing():
-    print("There is nothing there")
+    print("There is nothing there, please pick another direction")
 
 def noder():
-    print("That is not a direction, try again, rememberuse lowercase letters without a space, for example, ne")
+    print("That is not a direction, try again, remember use lowercase letters without a space, for example, ne")
 
     print("Which way do you want to go?")
 

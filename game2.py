@@ -1130,6 +1130,90 @@ def reading():
         print("That is not a valid answer, restar the rom")
 
         reading()
+
+def tar():
+    def der(direction):
+        if direction == "n":
+            nothing()
+
+            der(raw_input("> "))
+
+        elif direction == "ne":
+            nothing()
+
+            der(raw_input("> "))
+
+        elif direction == "e":
+            wall()
+
+            der(raw_input("> "))
+
+        elif direction == "se":
+            nothing()
+
+            der(raw_input("> "))
+
+        elif direction == "s":
+            reading()
+
+        elif direction == "sw":
+            pens()
+
+        elif direction == "w":
+            cloth()
+
+        elif direction == "nw":
+            nothing()
+
+            der(raw_input("> "))
+
+        else:
+            noder()
+
+            der(raw_input("> "))
+
+    print("Welcome to the hall of tar before you stands a monster that is made up of boiling hot tar")
+
+    print("What will you do?")
+
+    print("1. As the monster runs at you bolt past it to get to the door \n2. Call on the Ice god and have him freeze the whole room")
+
+    choice = raw_input("> ")
+
+    if choice == "1":
+        print("You manage to get past the moster, but right before the door you trip and fall into a puddle of tar")
+
+        die("Face melted off by tar")
+
+    elif choice == "2":
+        print("The Ice god sees how close you are, and comes to help you. He freezes the room, but also freezes you with it, what will you do?")
+
+        print("1. Call on the Fire godess to help \n2. Just wait in the ice")
+
+        choice = raw_input("> ")
+
+        if choice == "1":
+            print("The gods are sick of hearing your voice, so they ignore you")
+
+            die("You get frostbite and hypothermia")
+
+        elif choice == "2":
+            print("The Ice god sees your agony, and comes to fix it for you. He melts the ice around you \nYou go to the door")
+
+            print("What direction would you like to go in?")
+
+            der(raw_input("> "))
+
+        else:
+            print("That is not a valid answer, restart the room")
+
+            tar()
+
+    else:
+        print("That is not a valid answer, restart the room")
+
+        tar()
+
 def die(why):
     print("You died becuase %s" % why)
 

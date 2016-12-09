@@ -12,7 +12,7 @@ def start():
 
     print("To use these directions, type the letters as are above, and not the full name")
 
-    print("Your goal is to reach the treausre room and to claim the ultimate prize, \nThe Crown of Carmel!!!")
+    print("Your goal is to reach the treausre room and to claim the ultimate prize, \nThe Jewl of Babylon")
 
     print("In order to get here, you will face a variety of differenct rooms and have to navigate your way through the world.")
 
@@ -1213,6 +1213,78 @@ def tar():
         print("That is not a valid answer, restart the room")
 
         tar()
+
+def treasure():
+    print("Congratulations! You have reached the clock room. This is the most challenging room of all, and you are the first to ever attempt it")
+
+    print("A man looking like a clock comes to you and tells you the first question.")
+
+    print("The question is, to ten thousand square miles, what is the area of Idaho, no internet! ")
+
+    print("This time type in the number. AND ONLY THE NUMBER, NO COMMAS OR UNITS \nEx. 10000")
+
+    choice = raw_input("> ")
+
+    if int(choice) == 82751:
+        print("Amazing! That is the correct answer, I didn't think that you would be able to get it.")
+
+        print("The next question is: \nWhich European country first allowed women to vote?")
+
+        print("Type in the name of the country, with a capital letter at the begining and nothing else, no internet")
+
+        choice = raw_input("> ")
+
+        if choice == "Finland":
+            print("Right again, only two more questions!")
+
+            print("Next, \nWhat band did the man that the Sousaphone is named after conduct, type it with single spaces, and no caps, no internet")
+
+            choice = raw_input("> ")
+
+            if choice == "united states marine band" or "us marine band":
+                print("Only one more question, and then you can move on!")
+
+                print("What is the programming language Python named after?")
+
+                print("type with capital letters at the begining of each word and single spaced, no internet")
+
+                choice = raw_input("> ")
+
+                if choice == "Monty Python":
+                    print("You have done it, you are the first to complete the room of clocks, and I will now reaveal to you the secret")
+
+                    print("The secret is that this is actually the treasure room, and you have claimed the prize, The Jewl of Babylon.")
+
+                    print("%s, your name will go down in history as the name of the person that found the Jewl and passed the tresure room." % name)
+
+                    print("Thank you for playing. I hope you enjoy your victory, farewell!")
+
+                    exit(0)
+
+                else:
+                    print("That is either not the correct answer, or the answer is invalid, restart the game")
+
+                    start1()
+
+            else:
+                print("That is either not the correct answer, or the answer is invalid, restart the game")
+
+                start1()
+
+        else:
+            print("That is either not the correct answer, or the answer is invalid, restart the game")
+
+            start1()
+
+    elif 8200 < choice < 8300:
+        print("That is not the correct, but it is very close, so I will not send you to the start, rather back a few rooms.")
+
+        tar()
+
+    else:
+        print("That is either not the correct answer, or the answer is invalid, restart the game")
+
+        start1()
 
 def die(why):
     print("You died becuase %s" % why)

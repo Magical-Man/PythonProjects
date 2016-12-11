@@ -803,7 +803,7 @@ def war():
         elif direction == "nw":
             nothing()
 
-            der(direction)
+            der(raw_input("> "))
 
         else:
             noder()
@@ -1219,13 +1219,13 @@ def treasure():
 
     print("A man looking like a clock comes to you and tells you the first question.")
 
-    print("The question is, to ten thousand square miles, what is the area of Idaho, no internet! ")
+    print("What was the name of the Archduke of Austria-Hungary that was assasinated to start WW1? No internet ")
 
-    print("This time type in the number. AND ONLY THE NUMBER, NO COMMAS OR UNITS \nEx. 10000")
+    print("This time type in the name, single spaced with caps at the begining of each word.")
 
     choice = raw_input("> ")
 
-    if int(choice) == 82751:
+    if int(choice) == "Franz Ferdinand":
         print("Amazing! That is the correct answer, I didn't think that you would be able to get it.")
 
         print("The next question is: \nWhich European country first allowed women to vote?")

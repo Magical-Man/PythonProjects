@@ -792,7 +792,7 @@ def war():
         elif direction == "s":
             wall()
 
-            der(direction)
+            der(raw_input("> "))
 
         elif direction == "sw":
             lava()

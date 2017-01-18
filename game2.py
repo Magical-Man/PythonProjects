@@ -1225,7 +1225,7 @@ def treasure():
 
     choice = raw_input("> ")
 
-    if int(choice) == "Franz Ferdinand":
+    if choice == "Franz Ferdinand":
         print("Amazing! That is the correct answer, I didn't think that you would be able to get it.")
 
         print("The next question is: \nWhich European country first allowed women to vote?")

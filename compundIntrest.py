@@ -24,7 +24,7 @@ time = input("> ")
 
 step1 = (intrest / compound) + 1
 
-step2 = coumpound * time
+step2 = compound * time
 
 step3 = step1 ** step2
 
